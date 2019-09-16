@@ -32,28 +32,20 @@ class MainTest {
 		assertEquals("You Lose", result);
 		assertEquals("You Lose", result1);
 	}
-
-	@Test
-	void InitialPointIs9or8(){
-		String result = new Main().InitialRoll(8);
-		String result1 = new Main().InitialRoll(9);
-		assertEquals("Point is" + result, result);
-		assertEquals("Point is" + result1, result1);
-	}
 	
 	
 	//Point Match Roll
 	@Test
 	void PointMatchesPoint(){
 		String result = new Main().MatchPointNextRolls(4, 4);
-		assertEquals("You Win", result);
+		assertEquals("Roll was " + 4 + " You Win", result);
 	}
 	
 	//If you roll a seven you lose
 	@Test
 	void PointRollSeven(){
 		String result = new Main().MatchPointNextRolls(4, 7);
-		assertEquals("You Lose", result);
+		assertEquals("Roll was " + 7 + " You Lose", result);
 	}
 	
 	
